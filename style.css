@@ -1,0 +1,14 @@
+h1 {
+  color: red;
+}
+
+.next-page {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.next-page:hover {
+  font-weight: bold;
+  color: wheat;
+}
