@@ -11,6 +11,7 @@
     <!-- CDN AFrame, MindAR.js, AR.js-->
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function(){
@@ -36,17 +37,22 @@
       device-orientation-permission-ui="enabled: false"
     >
     <a-assets>
+      <!-- object gltf index 0 -->
         <a-asset-item id="example" src="./desk.gltf"></a-asset-item>
+      <!-- object gltf index 1 -->
+        <a-asset-item id="example1" src="./chair2.gltf"></a-asset-item>
     </a-assets>
     
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model
-        position="0 -0.5 0" height="0.552" width="1" rotation="0 50 0"
-          src="#example"
-        >
+        <a-gltf-model position="0 -0.5 0" height="0.552" width="1" rotation="0 50 0" src="#example">
       </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-gltf-model position="0 -0.5 0" height="0.552" width="1" rotation="0 50 0" src="#example1">
+      </a-entity>
+
     </a-scene>
   </body>
 </html>
